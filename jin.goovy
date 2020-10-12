@@ -1,0 +1,8 @@
+wp_host="192.168.0.10"
+wp_title="Wolcom Jin"
+wp_user_name="admin"
+wp_user_pass="admin"
+wp_user_mail="jin@gmail.com"
+MYSQL_ROOT_PASSWORD="example"
+GIT_USER="jintolia"
+GIT_EMAIL="tolia.katsubo@gmail.com"
