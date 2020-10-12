@@ -1,9 +1,9 @@
 pipeline {
-    agent {label 'node1'}
+    agent {label 'jin'}
     stages {
         stage('Clone Git Repo') {
             steps {
-                git credentialsId: 'b2922652-0478-4a1d-8072-7083a8ef79f8', url: 'git@github.com:ppavlov28/17.Project.git'
+                git credentialsId: 'd33e9b31-c56e-428e-938c-2f0d42ba53c1', url: 'git@github.com:jintolia/Project.git'
             }
         }
         stage('init environment') {
@@ -90,7 +90,7 @@ pipeline {
                     git tag -a "${GIT_TAG}" -m "[Jenkins CI] New Tag"
                 """
                 
-                sshagent(['b2922652-0478-4a1d-8072-7083a8ef79f8']) {
+                sshagent(['d33e9b31-c56e-428e-938c-2f0d42ba53c1']) {
                     sh "git push origin ${GIT_TAG}"
                 }
             }
