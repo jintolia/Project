@@ -25,6 +25,6 @@ services:
       WORDPRESS_DB_PASSWORD: $mysql_password
       WORDPRESS_DB_NAME: $mysql_database
     ports:
-      - 90:90
+      - 80:90
     volumes:
       - ./wordpress:/var/www/html
