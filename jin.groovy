@@ -3,6 +3,7 @@ wp_title="Wolcom Jin"
 wp_user_name="admin"
 wp_user_pass="admin"
 wp_user_mail="jin@gmail.com"
+MYSQL_DATABASE=VP
 MYSQL_USER=jin
 MYSQL_PASSWORD=tolias23
 MYSQL_ROOT_PASSWORD="example"
