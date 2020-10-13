@@ -1,4 +1,4 @@
-wp_host="192.168.0.10"
+wp_host="192.168.0.10:8085"
 wp_title="Wolcom Jin"
 wp_user_name="admin"
 wp_user_pass="admin"
