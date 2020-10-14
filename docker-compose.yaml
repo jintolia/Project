@@ -8,10 +8,10 @@ services:
     command: --default-authentication-plugin=mysql_native_password
     restart: always
     environment:
-      MYSQL_DATABASE: $mysql_database
-      MYSQL_USER: $mysql_user
-      MYSQL_PASSWORD: $mysql_password
-      MYSQL_ROOT_PASSWORD: $mysql_root_password
+      MYSQL_ROOT_PASSWORD: ${ROOT_PASS}
+      MYSQL_DATABASE: ${DB_NAME}
+      MYSQL_USER: ${DB_USER}
+      MYSQL_PASSWORD: ${DB_PASS}
     volumes:
       - ./wpdata:/var/lib/mysql
 
@@ -20,10 +20,10 @@ services:
     container_name: wordpress
     restart: always
     environment:
-      WORDPRESS_DB_HOST: db
-      WORDPRESS_DB_USER: $mysql_user
-      WORDPRESS_DB_PASSWORD: $mysql_password
-      WORDPRESS_DB_NAME: $mysql_database
+      WORDPRESS_DB_HOST: db:3306
+      WORDPRESS_DB_USER: ${MYSQL_USER}
+      WORDPRESS_DB_PASSWORD: ${MYSQL_PASSWORD}
+      WORDPRESS_DB_NAME: wordpress
     ports:
       - 8085:80
     volumes:
