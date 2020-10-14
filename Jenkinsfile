@@ -9,7 +9,7 @@ pipeline {
         stage('init environment') {
             steps {
                script{
-                load "${env.WORKSPACE}/jin.groovy"
+                load "${env.WORKSPACE}/inv.groovy"
                 }
             }
         }
