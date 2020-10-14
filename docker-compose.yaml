@@ -11,7 +11,7 @@ services:
       - ./wpdata:/var/lib/mysql
     command: '--default-authentication-plugin=mysql_native_password'
     networks:
-      - - back
+      - back
 
   wordpress:
     depends_on:
