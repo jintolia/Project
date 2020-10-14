@@ -1,8 +1,10 @@
+version: '3'
+
 services:
+
   db:
     image: mysql
     container_name: mysql
-    env_file: .env
     environment:
       MYSQL_ROOT_PASSWORD: ${ROOT_PASS}
       MYSQL_DATABASE: ${DB_NAME}
@@ -17,7 +19,6 @@ wordpress:
     image: wordpress
     container_name: wordpress
     restart: always
-    env_file: .env
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: ${MYSQL_USER}
