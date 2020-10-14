@@ -25,5 +25,7 @@ services:
       - WORDPRESS_DB_USER=$MYSQL_USER
       - WORDPRESS_DB_PASSWORD=$MYSQL_PASSWORD
       - WORDPRESS_DB_NAME=wordpress
+      ports:
+      - 8085:80
     volumes:
       - wordpress:/var/www/html
