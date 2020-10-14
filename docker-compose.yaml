@@ -31,3 +31,5 @@ services:
       - ./wordpress:/var/www/html
       networks:
        - back
+       networks:
+  back:
