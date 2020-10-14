@@ -1,4 +1,4 @@
-version: '3.1'
+version: '3'
 
 services:
 
@@ -20,7 +20,7 @@ wordpress:
     depends_on:
       - db
     image: wordpress
-    container_name: wordpress
+    container_name: wordpess
     restart: unless-stopped
     env_file: .env
     environment:
