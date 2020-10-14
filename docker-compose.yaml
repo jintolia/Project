@@ -7,9 +7,9 @@ services:
     restart: unless-stopped
     env_file: .env
     environment:
-       MYSQL_DATABASE: ${DB_NAME}
+       MYSQL_DATABASE: wp
     volumes:
-      - dbdata:/var/lib/mysql
+      - ./wpdata:/var/lib/mysql
     command: '--default-authentication-plugin=mysql_native_password'
     networks:
       - app-network
