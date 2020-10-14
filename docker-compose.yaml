@@ -5,7 +5,6 @@ services:
     image: mysql:8.0
     container_name: db
     restart: unless-stopped
-    env_file: .env
       MYSQL_ROOT_PASSWORD: ${ROOT_PASS}
       MYSQL_DATABASE: ${DB_NAME}
       MYSQL_USER: ${DB_USER}
@@ -22,7 +21,6 @@ services:
     image: wordpress:5.1.1-fpm-alpine
     container_name: wordpress
     restart: unless-stopped
-    env_file: .env
     environment:
       WORDPRESS_DB_HOST: db:3306
       WORDPRESS_DB_USER: ${MYSQL_USER}
