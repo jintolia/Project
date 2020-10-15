@@ -28,9 +28,9 @@ wordpress:
       - 8085:80
     volumes:
       - ./wordpress:/var/www/html
-      networks:
+    networks:
       - front
       - back
 networks:
-  front:
-  back:
+    front:
+    back:
